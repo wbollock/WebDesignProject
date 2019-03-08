@@ -1,14 +1,14 @@
-#CGS 3066: Web Programming and Design
-##Florida State University
-###Team Project Proposal Template
+# CGS 3066: Web Programming and Design
+## Florida State University
+### Team Project Proposal Template
 *Please use this template to write your project proposal. Your proposal must be between 1 and 2 pages. Please do not change the font, font size, margins or line spacing. All the text in italic should be removed from your final submission.*
 
-1. Team Members
+1. Team Members   
 **Will Bollock**
 **Isaac Wolfe**
 **Bryan Levy**
 
-2. Project Title
+2. Project Title   
 **AAF Fantasy Football**
 
 3. Motivation
