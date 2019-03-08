@@ -11,31 +11,31 @@
 2. Project Title   
 **AAF Fantasy Football**
 
-3. Motivation
+3. Motivation   
 We as a group have expressed similar interests in fantasy football as an entity. Since fantasy football has a such a large target audience we have decided what better way to expand the fantasy football market than to open the platform up to the new football league the Alliance of American Football. 
 
-4. Brief overview of what you are proposing
+4. Brief overview of what you are proposing   
 This website will allow users to login, create an AAF fantasy football team, and save or modify their team. The team will save for the user in between browser sessions. We will input real AAF player data in order to simulate a full fantasy football site. 
 
-5. Features to be implemented (Functional requirements)
-User creation
-User authentication
-Storing user team data between user sessions
-Storing user account information, especially safely storing password
-Player lists for user team selection
-Team list per user (1 team per user)
-Backend: PHP
-Database: SQL Server
-Frontend: CSS/HTML
-User interactivity, forms: JS
-Use of Git to maintain files
+5. Features to be implemented (Functional requirements)   
+* User creation
+* User authentication
+* Storing user team data between user sessions
+* Storing user account information, especially safely storing password
+* Player lists for user team selection
+* Team list per user (1 team per user)
+* Backend: PHP
+* Database: SQL Server
+* Frontend: CSS/HTML
+* User interactivity, forms: JS
+* Use of Git to maintain files
 
 6. Risk / Challenges
-Some risks and challenges that come with the development of this application include: 
-Lack of experience in the development of fantasy sports applications
-Maintaining the scope of the project
-Not sanitizing input properly on login fields
-Not having full access to the server we will be using
-Not fully understanding how to connect everything (frontend web page to backend data)
-Keeping everything in scope - not adding or removing previously upon players
-Dealing with multiple users and their data (for example, users making an account with the same username)
+* Some risks and challenges that come with the development of this application include: 
+* Lack of experience in the development of fantasy sports applications
+* Maintaining the scope of the project
+* Not sanitizing input properly on login fields
+* Not having full access to the server we will be using
+* Not fully understanding how to connect everything (frontend web page to backend data)
+* Keeping everything in scope - not adding or removing previously upon players
+* Dealing with multiple users and their data (for example, users making an account with the same username)
