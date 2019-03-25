@@ -39,3 +39,15 @@ This website will allow users to login, create an AAF fantasy football team, and
 * Not fully understanding how to connect everything (frontend web page to backend data)
 * Keeping everything in scope - not adding or removing previously upon players
 * Dealing with multiple users and their data (for example, users making an account with the same username)
+
+
+## TODO
+###Implement Front End
+#### HTML/CSS
+* Need a page for user to log in, user to make an account, user to check their team, and user to add to their team
+#### JS
+* Validate user inputs, similar to A4. Make password certain length, make username certain length, etc. Prevent odd characters in username?
+#### Implement Back End
+* Make a database w/ SQL 
+* Will need primary key (userid), team name, team roster
+* Link database to web page, somehow [DIFFICULT?]
