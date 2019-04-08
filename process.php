@@ -2,8 +2,11 @@
 <body>
     <h1>Process.php HTML</h1>
 <?php
-echo "Welcome ".$_GET["username"]."<br>";
-echo "Your password is: ".$_GET["password"];
+
+$username = $_GET["username"];
+$password = $_GET["password"];
+echo "Welcome ".$username." (with variable) <br>";
+echo "Your password is: ".$password."(with variable)";
 
 
 
@@ -34,13 +37,15 @@ if ( !mysqli_select_db( $database, "bollockdb") )
 
 // select * from People where username='test1' && passwd='testpw';
 
-$query = "SELECT * from People where username=\'".$username."\' && passwd=\'".$password."\'";
 
+
+$query = "SELECT * from People where username='".$username."' && passwd='".$password."';";
+echo "<p>Query is: $query</p>";
 if ( !( $result = mysqli_query( $database, $query)))
 {
     echo ( "<p>RESULT IS: $result</p>");
     echo ( "<p>Could not execute query!</p>" );
-    die( mysqli_error());
+    die( mysqli_error() );
 }
 
 echo "<p>You're successfully logged in!</p></body>";
