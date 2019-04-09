@@ -69,19 +69,32 @@
             echo ( "<td>" . $row[4]. "</td>");
             echo ( "<td>" . $row[2]. "</td>");
             echo ( "<td>" . $row[3]. "</td>");
-            echo ( "<td>"."<a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$teamname&click=1 class=\"btn\">Click me</a>"."</td>");
+            echo ( "<td>"."<a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$teamname&click=1&id=".$row[0]." class=\"btn\">Click me</a>"."</td>");
             // button needs to UPDATE player to team
             echo ( "</tr>" );
         }
+
+        
         // debug
         echo "</table>";
         echo "<p> Fetched rows </p>";
 
-        if($_GET['click']) {
-            echo "<script> alert('You added $row[4] to $teamname'); </script>";
+        if($_GET['click']) { // if player add button clicked
+            $queryUpdate = "UPDATE Players set team_name='$teamname' WHERE player_id=".$_GET['id'].";";
+            echo "<script> alert('You added ID".$_GET['id']." to $teamname' and QUERY is $queryUpdate'); </script>";
+         
+            if ( !( $result = mysqli_query( $database, $queryUpdate)))
+            { 
+                echo ( "<p>Could not execute query!</p>" );  
+                die( mysqli_error() );
+            }
         }
+
+        
 
         ?>
  
 </body>
 </html>
+
+UPDATE Players set team_name=Test_Team WHERE player_id=10 ;
