@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>Process.php HTML</h1>
+    <h1>newuser_process.php</h1>
 <?php
 
 $username = $_GET["username"];
@@ -28,9 +28,7 @@ if ( !mysqli_select_db( $database, "bollockdb") )
 
 // select * from People where username='test1' && passwd='testpw';
 
-
-
-$query = "SELECT * from People where username='".$username."' && passwd='".$password."';";
+$query = "INSERT INTO People VALUES ('$username','$password');";
 echo "<p>Query is: $query</p>";
 if ( !( $result = mysqli_query( $database, $query)))
 {
@@ -38,25 +36,13 @@ if ( !( $result = mysqli_query( $database, $query)))
     echo ( "<p>Could not execute query!</p>" );
     // maybe forward user w/ error message if login is bad w/ GET
     die( mysqli_error() );
-    
 }
-// if returning empty set, redirect back to homepage
-if (mysqli_num_rows($result) == 0)
-{
-    echo "<script> alert('User not found'); </script>";
-    echo "<script> location.href='http://ww2.cs.fsu.edu/~bollock/index.html'; </script>";
-}
-
-
-
-
-echo "<p>You're successfully logged in!</p></body>";
-
+echo "<p>You're successfully registered as $username!</p></body>";
+// redirect to log in page
 mysqli_close( $database );
-// if login is succesful
-echo "<script> location.href='http://ww2.cs.fsu.edu/~bollock/homepage.php?username=$username'; </script>";
-        exit;
-        
+
+echo "<script> alert('Successful registration. $username, please log in with your new credentials.'); </script>";
+echo "<script> location.href='http://ww2.cs.fsu.edu/~bollock/index.html'; </script>";
 
 ?>
 </body>
