@@ -44,10 +44,23 @@ This website will allow users to login, create an AAF fantasy football team, and
 ## TODO
 ###Implement Front End
 #### HTML/CSS
-* Need a page for user to log in, user to make an account, user to check their team, and user to add to their team
+* ~~Need a page for user to log in~~ Will
+* ~~User to make an account~~ Will
+* ~~User to check their team~~ Will
+* User to add to their team
+* Use CSS to make all 4 pages pretty
+* CSS on log in page
+* CSS on new user page
+* CSS on homepage
+* CSS on user adding to team page
+
 #### JS
 * Validate user inputs, similar to A4. Make password certain length, make username certain length, etc. Prevent odd characters in username?
 #### Implement Back End
-* Make a database w/ SQL 
-* Will need primary key (userid), team name, team roster
-* Link database to web page, somehow [DIFFICULT?]
+* ~~Make a database w/ SQL~~ Will
+* ~~Will need primary key (userid), team name, team roster~~ Will
+* ~~Link database to web page, somehow [DIFFICULT?] ~~ Will
+* Let user create a team
+* Let user add players to their team
+* Let user remove players from team(?)
+* Get rid of debug statements in php
