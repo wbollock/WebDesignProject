@@ -67,7 +67,8 @@
         echo "<p> Fetched rows </p>";
         
         ?>
-    
-
+    <?php
+echo "<h2><a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$team[0]> Add Players to your Team</h2>";
+?>
 </body>
 </html>

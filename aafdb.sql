@@ -12,6 +12,7 @@ CREATE TABLE People
 	PASSWD VARCHAR(20)
 	 );
 INSERT INTO People VALUES ('test1','testpw'); /* values for testing */
+INSERT INTO People VALUES ('admin', 'admin');
 
 
 
@@ -24,6 +25,7 @@ CREATE TABLE Teams
         USERNAME VARCHAR(20) NOT NULL REFERENCES PEOPLE
     );
 INSERT INTO Teams VALUES ('Test_Team', 'test1');
+INSERT INTO Teams VALUes('None', 'admin');
 
 
 
@@ -42,4 +44,15 @@ INSERT INTO Players (PLAYER_ID, TEAM_NAME, PLAYER_FNAME, PLAYER_LNAME, PLAYER_PO
 VALUES 
 ('1','Test_Team', 'Josh','Woodrum','QB'),
 ('2','Test_Team', 'Trent','Richardson','RB'),
-('3','Test_team', 'Charles', 'Johnson','WR');
+('3','Test_team', 'Charles', 'Johnson','WR'),
+('4','None','Garrett','Gilbert','QB'),
+('5','None','Christian','Hackenberg','QB'),
+('6','None','Rashad','Ross','WR'),
+('7','None','Keith','Reaser','CB'),
+('8','None','John','Wolford','QB'),
+('9','None','Logan','Woodside','QB'),
+('10','None','Denard','Robinson','RB');
+
+select * from People;
+select * from Players;
+select * from Teams;
