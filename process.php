@@ -6,12 +6,11 @@
 $username = $_GET["username"];
 $password = $_GET["password"];
 echo "Welcome ".$username." (with variable) <br>";
-echo "Your password is: ".$password."(with variable)";
 
 
 
 // connecting to DB
-echo "<h1>process.php PHP</h1>";
+
 // user login, verify login credentials
 
 
@@ -43,14 +42,29 @@ $query = "SELECT * from People where username='".$username."' && passwd='".$pass
 echo "<p>Query is: $query</p>";
 if ( !( $result = mysqli_query( $database, $query)))
 {
-    echo ( "<p>RESULT IS: $result</p>");
+    
     echo ( "<p>Could not execute query!</p>" );
+    // maybe forward user w/ error message if login is bad w/ GET
     die( mysqli_error() );
+    
+}
+// if returning empty set, redirect back to homepage
+if (mysqli_num_rows($result) == 0)
+{
+    echo "<script> alert('User not found'); </script>";
+    echo "<script> location.href='http://ww2.cs.fsu.edu/~bollock/index.html'; </script>";
 }
 
-echo "<p>You're successfully logged in!</p></body>";
-mysqli_close( $database );
 
+
+
+echo "<p>You're successfully logged in!</p></body>";
+
+mysqli_close( $database );
+// if login is succesful
+echo "<script> location.href='http://ww2.cs.fsu.edu/~bollock/homepage.php?username=$username'; </script>";
+        exit;
+        
 ?>
 </body>
 </html>
