@@ -54,6 +54,7 @@ This website will allow users to login, create an AAF fantasy football team, and
 * CSS on homepage
 * CSS on user adding to team page
 * Fix my numerous misspellings
+* Add favicon
 #### JS
 * Validate user inputs, similar to A4. Make password certain length, make username certain length, etc. Prevent odd characters in username?
 * All validation done in JS
