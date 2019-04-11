@@ -56,11 +56,15 @@ This website will allow users to login, create an AAF fantasy football team, and
 * Fix my numerous misspellings
 #### JS
 * Validate user inputs, similar to A4. Make password certain length, make username certain length, etc. Prevent odd characters in username?
+* All validation done in JS
+* Registration: confirm password
 #### Implement Back End
 * ~~Make a database w/ SQL~~ Will
 * ~~Will need primary key (userid), team name, team roster~~ Will
 * ~~Link database to web page, somehow~~ Will
-* Let user create a team
-* Let user add players to their team
-* Let user remove players from team(?)
+* ~~Let user create a team~~
+* ~~Let user add players to their team~~
+* ~~Let user remove players from team(?)~~
 * Get rid of debug statements in php
+* Hash passwords in SQL (HASH_BYTES) (also change SQL password type)
+* Add email to registration
