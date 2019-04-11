@@ -11,6 +11,7 @@
     
     <?php
     $teamname = $_GET["teamname"];
+    $username = $_GET["username"];
     echo "<h3>Team $teamname</h3>";
    
     // copied from process.php
@@ -42,10 +43,23 @@
             echo ( "<td>" . $row[4]. "</td>");
             echo ( "<td>" . $row[2]. "</td>");
             echo ( "<td>" . $row[3]. "</td>");
+            echo ( "<td>" . "<a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$teamname&remove=2&username=$username&id=".$row[0]." class=\"btn\">Remove Player</a>"."</td>");
             echo ( "</tr>" );
         }
         // debug
         echo "</table>";
+
+
+        if($_GET['remove']) { // if player add button clicked
+            $queryUpdate = "UPDATE Players set team_name='None' WHERE player_id=".$_GET['id'].";";
+            echo "<script> alert('You added ID".$_GET['id']." to free agency' and QUERY is $queryUpdate'); </script>";
+         
+            if ( !( $result = mysqli_query( $database, $queryUpdate)))
+            { 
+                echo ( "<p>Could not execute query!</p>" );  
+                die( mysqli_error() );
+            }
+        }
 
         
 
@@ -54,7 +68,7 @@
     // all players with None team name are not added.
     // put a button by them, that says "Add to Team" then refresh page?
     // add to team button will just change the team_name to user's team from NONE w/ update
-    echo "<h2>Avaiable players</h2>";
+    echo "<h2>Available players</h2>";
     echo "<table border='2'>";
     
         $queryAllPlayers = "SELECT * From Players where team_name='None';";
@@ -69,7 +83,7 @@
             echo ( "<td>" . $row[4]. "</td>");
             echo ( "<td>" . $row[2]. "</td>");
             echo ( "<td>" . $row[3]. "</td>");
-            echo ( "<td>"."<a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$teamname&click=1&id=".$row[0]." class=\"btn\">Click me</a>"."</td>");
+            echo ( "<td>"."<a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$teamname&click=1&username=$username&id="."$row[0]"." class=\"btn\">Add Player</a>"."</td>");
             // button needs to UPDATE player to team
             echo ( "</tr>" );
         }
@@ -77,7 +91,6 @@
         
         // debug
         echo "</table>";
-        echo "<p> Fetched rows </p>";
 
         if($_GET['click']) { // if player add button clicked
             $queryUpdate = "UPDATE Players set team_name='$teamname' WHERE player_id=".$_GET['id'].";";
@@ -91,10 +104,10 @@
         }
 
         
-
+        echo "<a href=http://ww2.cs.fsu.edu/~bollock/homepage.php?username=$username&teamname=$teamname class=\"btn\">Back To Homepage</a>";
         ?>
  
+
+
 </body>
 </html>
-
-UPDATE Players set team_name=Test_Team WHERE player_id=10 ;

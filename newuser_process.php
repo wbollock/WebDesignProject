@@ -5,7 +5,8 @@
 
 $username = $_GET["username"];
 $password = $_GET["password"];
-echo "Welcome ".$username." (with variable) <br>";
+$teamname = $_GET["teamname"];
+
 
 
 
@@ -29,7 +30,6 @@ if ( !mysqli_select_db( $database, "bollockdb") )
 // select * from People where username='test1' && passwd='testpw';
 
 $query = "INSERT INTO People VALUES ('$username','$password');";
-echo "<p>Query is: $query</p>";
 if ( !( $result = mysqli_query( $database, $query)))
 {
     
@@ -37,11 +37,20 @@ if ( !( $result = mysqli_query( $database, $query)))
     // maybe forward user w/ error message if login is bad w/ GET
     die( mysqli_error() );
 }
-echo "<p>You're successfully registered as $username!</p></body>";
+
+$query = "INSERT INTO Teams VALUES ('$teamname','$username');";
+if ( !( $result = mysqli_query( $database, $query)))
+{
+    
+    echo ( "<p>Could not execute query!</p>" );
+    // maybe forward user w/ error message if login is bad w/ GET
+    die( mysqli_error() );
+}
+
 // redirect to log in page
 mysqli_close( $database );
 
-echo "<script> alert('Successful registration. $username, please log in with your new credentials.'); </script>";
+echo "<script> alert('Successful registration. $username, team name: $teamname. Please log in with your new credentials.'); </script>";
 echo "<script> location.href='http://ww2.cs.fsu.edu/~bollock/index.html'; </script>";
 
 ?>

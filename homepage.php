@@ -68,7 +68,7 @@
         
         ?>
     <?php
-echo "<h2><a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$team[0]> Add Players to your Team</h2>";
+echo "<h2><a href=http://ww2.cs.fsu.edu/~bollock/addplayers.php?teamname=$team[0]&username=$username> Add Players to your Team</h2>";
 ?>
 </body>
 </html>
