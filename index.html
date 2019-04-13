@@ -7,6 +7,7 @@
     <script type="text/javascript" rel="script" src="js/scripts.js" defer></script>
 </head>
 <body>
+<<<<<<< HEAD
     <h1>AAF Fantasy Football</h1>
     <h3>Log In</h2> <!-- should use Get, retrive info from server. if OK, pass them on-->
     <form action="http://ww2.cs.fsu.edu/~bollock/process.php" id="main-form" method="GET">
@@ -26,3 +27,26 @@
     <!-- if log in succesful, take to main team page (javascript?)-->
    
 </body>
+=======
+	<div id="content">
+			<img id="logo" src="./img/aafLogo.png" alt="AAF Logo">
+			<h1>AAF Fantasy Football</h1>
+			<h3>Log In</h2> <!-- should use Get, retrive info from server. if OK, pass them on-->
+			<form action="http://ww2.cs.fsu.edu/~bollock/process.php" id="main-form" method="GET">
+					<div class="row">
+						   <label for="username">Username</label>
+							<input id="username" name="username" type="text"/>                
+						</div>
+						<div class="row">
+							<label for="password">Password</label>
+							<input id="password" name="password" type="password"/>
+						</div>
+						<div class="row">
+								<input id="submit-btn" name="submit-btn" type="submit" value="Log In"/>
+						</div>
+			</form>
+			<p>New user? <a href="newuser.html">Click here</a></p>
+			<!-- if log in succesful, take to main team page (javascript?)-->
+	</div>
+</body>
+>>>>>>> 05e5d7af95d5999ba5ad1c0fa05480af2f5115ef
