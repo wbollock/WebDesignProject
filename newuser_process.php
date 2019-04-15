@@ -6,7 +6,7 @@
 $username = $_GET["username"];
 $password = $_GET["password"];
 $teamname = $_GET["teamname"];
-
+$email = $_GET["email"];
 
 
 
@@ -29,7 +29,7 @@ if ( !mysqli_select_db( $database, "bollockdb") )
 
 // select * from People where username='test1' && passwd='testpw';
 
-$query = "INSERT INTO People VALUES ('$username',MD5('$password'));";
+$query = "INSERT INTO People VALUES ('$username',MD5('$password'),'$email');";
 if ( !( $result = mysqli_query( $database, $query)))
 {
     echo ( "<p>line 35!</p>" );

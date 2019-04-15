@@ -66,6 +66,6 @@ This website will allow users to login, create an AAF fantasy football team, and
 * ~~Let user create a team~~
 * ~~Let user add players to their team~~
 * ~~Let user remove players from team(?)~~
-* Get rid of debug statements in php
-* Hash passwords in SQL (HASH_BYTES) (also change SQL password type)
-* Add email to registration
+* Get rid of debug statements in php && format the code
+* ~~Hash passwords in SQL (HASH_BYTES) (also change SQL password type)~~ done with MD5 instead of HASH_BYTES. Existing passwords hashed.
+* ~~Add email to registration~~ done, but email has no use case 
