@@ -29,8 +29,9 @@ if ( !mysqli_select_db( $database, "bollockdb") )
 // select * from People where username='test1' && passwd='testpw';
 
 
+// need to hash the password first
+$query = "SELECT * from People where username='".$username."' && passwd= MD5('$password');";
 
-$query = "SELECT * from People where username='".$username."' && passwd='".$password."';";
 echo "<p>Query is: $query</p>";
 if ( !( $result = mysqli_query( $database, $query)))
 {

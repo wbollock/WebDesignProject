@@ -29,10 +29,11 @@ if ( !mysqli_select_db( $database, "bollockdb") )
 
 // select * from People where username='test1' && passwd='testpw';
 
-$query = "INSERT INTO People VALUES ('$username','$password');";
+$query = "INSERT INTO People VALUES ('$username',MD5('$password'));";
 if ( !( $result = mysqli_query( $database, $query)))
 {
-    
+    echo ( "<p>line 35!</p>" );
+    echo ("<p>bad query is: $query</p>");
     echo ( "<p>Could not execute query!</p>" );
     // maybe forward user w/ error message if login is bad w/ GET
     die( mysqli_error() );
@@ -41,11 +42,25 @@ if ( !( $result = mysqli_query( $database, $query)))
 $query = "INSERT INTO Teams VALUES ('$teamname','$username');";
 if ( !( $result = mysqli_query( $database, $query)))
 {
-    
+    echo ( "<p>line 44!</p>" );
     echo ( "<p>Could not execute query!</p>" );
     // maybe forward user w/ error message if login is bad w/ GET
     die( mysqli_error() );
 }
+// password hashing
+// UPDATE table SET Password = MD5(Password) WHERE ID!=[specified index]
+// CREDIT: https://stackoverflow.com/questions/704194/how-to-hash-passwords-in-mysql
+
+//$query = "UPDATE People SET PASSWD = MD5($password) WHERE id=$username;";
+/*echo ("<p>QUERY IS: $query</p>");
+if ( !( $result = mysqli_query( $database, $query)))
+{
+    echo ( "<p>QUERY IS: $query</p>" );
+    echo ( "<p>TEST? LINE 58</p>" );
+    echo ( "<p>Could not execute query!</p>" );
+    // maybe forward user w/ error message if login is bad w/ GET
+    die( mysqli_error() );
+}*/
 
 // redirect to log in page
 mysqli_close( $database );
