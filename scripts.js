@@ -27,7 +27,7 @@ function newUserCheck() {
 		}
 }
 
-document.getElementById("new-user-submit").addEventListener("click",function(event) {
+document.getElementById("submit-btn").addEventListener("click",function(event) {
 		let test = newUserCheck();
 		if (true) {
 				event.preventDefault()
