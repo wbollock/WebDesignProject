@@ -49,15 +49,15 @@ This website will allow users to login, create an AAF fantasy football team, and
 * ~~User to check their team~~ *Will*
 * User to add to their team
 * Use CSS to make all 4 pages pretty
-* CSS on log in page
-* CSS on new user page
+* ~~CSS on log in page~~ Isaac
+* ~~CSS on new user page~~ Isaac
 * CSS on homepage
 * CSS on user adding to team page
 * Fix my numerous misspellings
 * Add favicon
 #### JS
-* Validate user inputs, similar to A4. Make password certain length, make username certain length, etc. Prevent odd characters in username?
-* All validation done in JS
+* ~~Validate user inputs, similar to A4. Make password certain length, make username certain length, etc.~~ Prevent odd characters in username? Isaac
+* ~~All validation done in JS~~ Isaac
 * Registration: confirm password
 #### Implement Back End
 * ~~Make a database w/ SQL~~ Will
@@ -66,7 +66,6 @@ This website will allow users to login, create an AAF fantasy football team, and
 * ~~Let user create a team~~
 * ~~Let user add players to their team~~
 * ~~Let user remove players from team(?)~~
-* Get rid of debug statements in php && format the code
-* ~~Hash passwords in SQL (HASH_BYTES) (also change SQL password type)~~ done with MD5 instead of HASH_BYTES. Existing passwords hashed.
-* ~~Add email to registration~~ done, but email has no use case 
-* Add more players to team "None"
+* Get rid of debug statements in php
+* Hash passwords in SQL (HASH_BYTES) (also change SQL password type)
+* Add email to registration
