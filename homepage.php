@@ -41,9 +41,9 @@
 				<!--<caption> Your AAF team </caption>-->
 				<?php 
 				
-				echo "<p> Echoing table </p>";
+				
 				$queryPlayers = "SELECT * from Players where team_name='".$team[0]."';";
-				echo "<p> query is: ".$queryPlayers;
+				
 				echo "<table border='1'>";
 			  
 				
@@ -52,8 +52,8 @@
 					echo ( "<p>Could not execute query!</p>" );  
 					die( mysqli_error() );
 				}
-				// debug
-				echo "<p> Executed query </p>";
+			
+			
 
 				while ($row = mysqli_fetch_array( $result ))
 				{
@@ -65,7 +65,7 @@
 				}
 				// debug
 				echo "</table>";
-				echo "<p> Fetched rows </p>";
+			
 				
 				?>
 			<?php

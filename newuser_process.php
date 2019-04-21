@@ -44,24 +44,24 @@ if (!($result = mysqli_query($database, $query)))
 	die(mysqli_error());
 	}
 
-// password hashing
-// UPDATE table SET Password = MD5(Password) WHERE ID!=[specified index]
-// CREDIT: https://stackoverflow.com/questions/704194/how-to-hash-passwords-in-mysql
-// $query = "UPDATE People SET PASSWD = MD5($password) WHERE id=$username;";
+		// password hashing
+		// UPDATE table SET Password = MD5(Password) WHERE ID!=[specified index]
+		// CREDIT: https://stackoverflow.com/questions/704194/how-to-hash-passwords-in-mysql
+		// $query = "UPDATE People SET PASSWD = MD5($password) WHERE id=$username;";
 
-/*echo ("<p>QUERY IS: $query</p>");
-if ( !( $result = mysqli_query( $database, $query)))
-{
-echo ( "<p>QUERY IS: $query</p>" );
-echo ( "<p>TEST? LINE 58</p>" );
-echo ( "<p>Could not execute query!</p>" );
+		/*echo ("<p>QUERY IS: $query</p>");
+		if ( !( $result = mysqli_query( $database, $query)))
+		{
+		echo ( "<p>QUERY IS: $query</p>" );
+		echo ( "<p>TEST? LINE 58</p>" );
+		echo ( "<p>Could not execute query!</p>" );
 
-// maybe forward user w/ error message if login is bad w/ GET
+		// maybe forward user w/ error message if login is bad w/ GET
 
-die( mysqli_error() );
-}*/
+		die( mysqli_error() );
+		}*/
 
-// redirect to log in page
+		// redirect to log in page
 
 mysqli_close($database);
 echo "<script> alert('Successful registration. $username, team name: $teamname. Please log in with your new credentials.'); </script>";

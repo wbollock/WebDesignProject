@@ -20,7 +20,7 @@ echo "<p>Opening database....</p>";
 // need to hash the password first
 
 $query = "SELECT * from People where username='" . $username . "' && passwd= MD5('$password');";
-echo "<p>Query is: $query</p>";
+
 
 if (!($result = mysqli_query($database, $query)))
 	{
