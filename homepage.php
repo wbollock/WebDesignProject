@@ -34,7 +34,7 @@
 				}
 
 			$team = mysqli_fetch_row($result);
-				echo "<p> Team $team[0]."</p>";
+				echo "<p> Team " ."$team[0]"."</p>";
 			?>
 
 		   <!-- team table --> <!--switch to team name -->
