@@ -19,6 +19,15 @@ body {
 	border-width: 10px;
 }
 
+#boxed {
+    background-color: #bbb;
+	height: 5%;
+	width: 20%;
+	margin: 0 auto;
+	border-style: outset;
+	border-width: 10px;
+}
+
 table {
 	align: center;
 }
