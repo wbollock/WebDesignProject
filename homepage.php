@@ -54,7 +54,7 @@
 					die( mysqli_error() );
 				}
 				// debug
-				echo "<p> Executed query </p>";
+				
 
 				while ($row = mysqli_fetch_array( $result ))
 				{
