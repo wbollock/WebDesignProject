@@ -8,12 +8,12 @@
     <script type="text/javascript" rel="script" src="js/scripts.js" defer></script>
 </head>
 <body>
-    <h1>Your Team Home Page</h1>
+    <h1 id="boxed">Your Team Home Page</h1>
     
     <?php
     $teamname = $_GET["teamname"];
     $username = $_GET["username"];
-    echo "<h3>Team $teamname</h3>";
+    echo "<h3 id='boxed'>Team $teamname</h3>";
    
     // copied from process.php
     if ( !( $database = mysqli_connect( "dbsrv2.cs.fsu.edu","bollock","1hSObrpVvNhq")))
@@ -40,7 +40,7 @@
 
         while ($row = mysqli_fetch_array( $result ))
         {
-            echo ( "<tr>" );
+            echo ( "<tr id='contents'>" );
             echo ( "<td>" . $row[4]. "</td>");
             echo ( "<td>" . $row[2]. "</td>");
             echo ( "<td>" . $row[3]. "</td>");
@@ -69,7 +69,7 @@
     // all players with None team name are not added.
     // put a button by them, that says "Add to Team" then refresh page?
     // add to team button will just change the team_name to user's team from NONE w/ update
-    echo "<h2>Available players</h2>";
+    echo "<h2 id='boxed'>Available players</h2>";
     echo "<table border='2'>";
     
         $queryAllPlayers = "SELECT * From Players where team_name='None';";
@@ -80,7 +80,7 @@
         }
     while ($row = mysqli_fetch_array( $result ))
         {
-            echo ( "<tr>" );
+            echo ( "<tr id='contents'>" );
             echo ( "<td>" . $row[4]. "</td>");
             echo ( "<td>" . $row[2]. "</td>");
             echo ( "<td>" . $row[3]. "</td>");
