@@ -28,7 +28,7 @@
         <!--<caption> Your AAF team </caption>-->
         <?php 
         $queryPlayers = "SELECT * from Players where team_name='$teamname'";
-        echo "<table border='1'>";
+        echo "<table id='contents' border='1'>";
       
         
         if ( !( $result = mysqli_query( $database, $queryPlayers)))
@@ -40,7 +40,7 @@
 
         while ($row = mysqli_fetch_array( $result ))
         {
-            echo ( "<tr id='contents'>" );
+            echo ( "<tr>" );
             echo ( "<td>" . $row[4]. "</td>");
             echo ( "<td>" . $row[2]. "</td>");
             echo ( "<td>" . $row[3]. "</td>");
@@ -70,7 +70,7 @@
     // put a button by them, that says "Add to Team" then refresh page?
     // add to team button will just change the team_name to user's team from NONE w/ update
     echo "<h2 id='boxed'>Available players</h2>";
-    echo "<table border='2'>";
+    echo "<table id='contents' border='2'>";
     
         $queryAllPlayers = "SELECT * From Players where team_name='None';";
     if ( !( $result = mysqli_query( $database, $queryAllPlayers)))
@@ -80,7 +80,7 @@
         }
     while ($row = mysqli_fetch_array( $result ))
         {
-            echo ( "<tr id='contents'>" );
+            echo ( "<tr>" );
             echo ( "<td>" . $row[4]. "</td>");
             echo ( "<td>" . $row[2]. "</td>");
             echo ( "<td>" . $row[3]. "</td>");
