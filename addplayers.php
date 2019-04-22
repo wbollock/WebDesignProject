@@ -8,12 +8,12 @@
     <script type="text/javascript" rel="script" src="js/scripts.js" defer></script>
 </head>
 <body>
-    <h1 id="boxed">Your Team Home Page</h1>
+    <h1 id="top">Your Team Home Page</h1>
     
     <?php
     $teamname = $_GET["teamname"];
     $username = $_GET["username"];
-    echo "<h3 id='boxed'>Team $teamname</h3>";
+    echo "<h3 id='title'>Team $teamname</h3>";
    
     // copied from process.php
     if ( !( $database = mysqli_connect( "dbsrv2.cs.fsu.edu","bollock","1hSObrpVvNhq")))
