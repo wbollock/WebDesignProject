@@ -1,6 +1,5 @@
 body {
     font-family: Verdana, Arial, sans-serif;
-    font-size: 1.4vh;
     font-size: 1.2em;
 	margin:3% auto;
 	text-align: center;
@@ -13,11 +12,26 @@ body {
 
 #content {
 	background-color: #cecece;
+	align-content: center;
 	height: 65%;
 	width: 40%;
 	margin: 0 auto;
 	border-style: outset;
 	border-width: 10px;
+}
+
+#boxed {
+    background-color: #bbb;
+	align-content: center;
+	height: 5%;
+	width: 20%;
+	margin: 0 auto;
+	border-style: outset;
+	border-width: 10px;
+}
+
+table {
+	align: center;
 }
 
 #logo {
