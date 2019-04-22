@@ -51,10 +51,10 @@ This website will allow users to login, create an AAF fantasy football team, and
 * Use CSS to make all 4 pages pretty
 * ~~CSS on log in page~~ Isaac
 * ~~CSS on new user page~~ Isaac
-* CSS on homepage
+* ~~CSS on homepage~~ Isaac
 * CSS on user adding to team page
 * Fix my numerous misspellings
-* Add favicon
+* ~~Add favicon~~ Isaac
 #### JS
 * ~~Validate user inputs, similar to A4. Make password certain length, make username certain length, etc.~~ Prevent odd characters in username? Isaac
 * ~~All validation done in JS~~ Isaac
