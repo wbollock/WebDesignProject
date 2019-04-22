@@ -23,10 +23,7 @@ $query = "INSERT INTO People VALUES ('$username',MD5('$password'),'$email');";
 
 if (!($result = mysqli_query($database, $query)))
 	{
-	echo ("<p>line 35!</p>");
-	echo ("<p>bad query is: $query</p>");
-	echo ("<p>Could not execute query!</p>");
-
+	echo ("<p> Username or email already taken. Please try to register again.");
 	// maybe forward user w/ error message if login is bad w/ GET
 
 	die(mysqli_error());
@@ -36,8 +33,8 @@ $query = "INSERT INTO Teams VALUES ('$teamname','$username');";
 
 if (!($result = mysqli_query($database, $query)))
 	{
-	echo ("<p>line 44!</p>");
-	echo ("<p>Could not execute query!</p>");
+	echo ("<p> Team name already taken! </p>");
+	echo ("<p> Please try a different team name.</p>");
 
 	// maybe forward user w/ error message if login is bad w/ GET
 
