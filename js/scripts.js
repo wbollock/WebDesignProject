@@ -1,6 +1,7 @@
 function newUserCheck() {
 		const username = document.getElementById("username").value;
 		const password = document.getElementById("password").value;
+		const passwordConfirm = document.getElementById("passwordConfirm").value;
 		const teamname = document.getElementById("teamname").value;
 		const email = document.getElementById("email").value;
 
@@ -16,6 +17,9 @@ function newUserCheck() {
 		}
 		else {
 				document.getElementById("passwordLabel").innerHTML = "Password";
+		}
+		if (password != passwordConfirm) {
+				document.getElementById("passwordLabel").innerHTML = "Password <p style='color:red'>(Passwords must match.)</p>";
 		}
 
 		if (teamname.length < 1) {
