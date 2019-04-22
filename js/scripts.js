@@ -23,7 +23,7 @@ function newUserCheck() {
 		}
 
 		emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		if (email.match(emailRegex)) {
+		if (!email.match(emailRegex)) {
 				document.getElementById("emailLabel").innerHTML = "Email <p style='color:red'>(Please use a valid email.)</p>";
 		}
 		else {
