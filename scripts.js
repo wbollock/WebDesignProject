@@ -18,6 +18,10 @@ function newUserCheck() {
 				document.getElementById("passwordLabel").innerHTML = "Password";
 		}
 
+		if (teamname.length < 1) {
+				document.getElementById("teamnameLabel").innerHTML = "Team Name <p style='color:red'>(Team Name must not be empty.)</p>";
+		}
+
 		emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		if (email.match(emailRegex)) {
 				document.getElementById("emailLabel").innerHTML = "Email <p style='color:red'>(Please use a valid email.)</p>";
