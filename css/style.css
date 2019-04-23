@@ -31,7 +31,10 @@ body {
 }
 
 table {
-	align: center;
+	align-content: center;
+	margin: 0 auto;
+	background-color: #aaa;
+	width: 60%;
 }
 
 #logo {
@@ -45,34 +48,40 @@ table {
 }
 
 .btn {
-  background-color: #555;
-  border: none;
+  border: 2px solid #fff;
   color: white;
   padding: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 12px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+	background-color: #ddd;
 }
 
 #top {
-    background-color: #fff;
     align-content: center;
     height: 65%;
     width: 80%;
-    margin: 0 auto;
-    border-style: ridge;
-    border-width: 10px;
+    margin: 10px auto;
+	border-bottom: 2px solid #fff;
     font-size: 2em;
+	color: #fff;
 }
 
 #title {
     background-color: #fff;
     align-content: center;
     height: 65%;
-    width: 50%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 15px auto;
     border-style: ridge;
     border-width: 10px;
     font-size: 2em;
+	box-shadow: 10px 10px 5px grey;
 }

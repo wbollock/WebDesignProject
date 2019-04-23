@@ -33,6 +33,13 @@ function newUserCheck() {
 		else {
 				document.getElementById("emailLabel").innerHTML = "Email";
 		}
+		// emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		// if (!email.match(emailRegex)) {
+		// 		document.getElementById("emailLabel").innerHTML = "Email <p style='color:red'>(Please use a valid email.)</p>";
+		// }
+		// else {
+		// 		document.getElementById("emailLabel").innerHTML = "Email";
+		// }
 }
 
 document.getElementById("submit-btn").addEventListener("click",function(event) {
