@@ -54,7 +54,7 @@ if (!($result = mysqli_query($database, $query)))
 		echo ( "<p>Could not execute query!</p>" );
 
 		// maybe forward user w/ error message if login is bad w/ GET
-
+c
 		die( mysqli_error() );
 		}*/
 
