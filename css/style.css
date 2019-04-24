@@ -76,7 +76,8 @@ table {
 }
 
 #title {
-    background-color: #CE2633;
+    background-color: #b0b2b2;
+	color: #CE2633;
     align-content: center;
     height: 65%;
     width: 80%;
