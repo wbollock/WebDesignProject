@@ -48,17 +48,17 @@ This website will allow users to login, create an AAF fantasy football team, and
 * ~~User to make an account~~ *Will*
 * ~~User to check their team~~ *Will*
 * User to add to their team
-* Use CSS to make all 4 pages pretty
+* ~~Use CSS to make all 4 pages pretty~~ Isaac
 * ~~CSS on log in page~~ Isaac
 * ~~CSS on new user page~~ Isaac
 * ~~CSS on homepage~~ Isaac
-* CSS on user adding to team page
+* ~~CSS on user adding to team page~~ Isaac
 * Fix my numerous misspellings
 * ~~Add favicon~~ Isaac
 #### JS
 * ~~Validate user inputs, similar to A4. Make password certain length, make username certain length, etc.~~ Prevent odd characters in username? Isaac
 * ~~All validation done in JS~~ Isaac
-* Registration: confirm password
+* ~~Registration: confirm password~~ Isaac
 #### Implement Back End
 * ~~Make a database w/ SQL~~ Will
 * ~~Will need primary key (userid), team name, team roster~~ Will
