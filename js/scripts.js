@@ -28,8 +28,13 @@ function newUserCheck() {
 				correct = false;
 		}
 
+		let space = "\s";
 		if (teamname.length < 1) {
 				document.getElementById("teamnameLabel").innerHTML = "Team Name <p style='color:red'>(Team Name must not be empty.)</p>";
+				correct = false;
+		}
+		else if (teamname.match(space)) {
+				document.getElementById("teamnameLabel").innerHTML = "Team Name <p style='color:red'>(Team Name must not contain a space.)</p>";
 				correct = false;
 		}
 
