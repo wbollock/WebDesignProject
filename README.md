@@ -42,7 +42,7 @@ This website will allow users to login, create an AAF fantasy football team, and
 
 
 ## TODO
-###Implement Front End
+### Implement Front End
 #### HTML/CSS
 * ~~Need a page for user to log in~~ *Will*
 * ~~User to make an account~~ *Will*
