@@ -11,7 +11,7 @@ body {
 }
 
 #content {
-	background-color: #cecece;
+	background-color: #b0b2b2;
 	align-content: center;
 	height: 65%;
 	width: 40%;
@@ -48,6 +48,7 @@ table {
 }
 
 .btn {
+  background-color: #1F3A68;
   border: 2px solid #fff;
   color: white;
   padding: 5px;
@@ -75,7 +76,7 @@ table {
 }
 
 #title {
-    background-color: #fff;
+    background-color: #CE2633;
     align-content: center;
     height: 65%;
     width: 80%;
