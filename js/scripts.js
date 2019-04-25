@@ -38,15 +38,15 @@ function newUserCheck() {
 				correct = false;
 		}
 
-		// emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		// if (!email.match(emailRegex)) {
-		// 		document.getElementById("emailLabel").innerHTML = "Email <p style='color:red'>(Please use a valid email.)</p>";
-		// 		correct = false;
-		// }
-		// else {
-		// 		document.getElementById("emailLabel").innerHTML = "Email";
-				// correct = true;
-		// }
+		emailRegex = /\S+@\S+\.\S+/;
+		if (emailRegex.test(email) === false) {
+				document.getElementById("emailLabel").innerHTML = "Email <p style='color:red'>(Please use a valid email.)</p>";
+				correct = false;
+		}
+		else {
+				document.getElementById("emailLabel").innerHTML = "Email";
+		}
+
 		if (correct === false) {
 				return false;
 		}
