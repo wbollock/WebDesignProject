@@ -28,14 +28,18 @@ function newUserCheck() {
 				correct = false;
 		}
 
-		let space = "\s";
+		let space = /\s/;
 		if (teamname.length < 1) {
 				document.getElementById("teamnameLabel").innerHTML = "Team Name <p style='color:red'>(Team Name must not be empty.)</p>";
 				correct = false;
 		}
-		else if (teamname.match(space)) {
+		else if (space.test(teamname) === true) {
 				document.getElementById("teamnameLabel").innerHTML = "Team Name <p style='color:red'>(Team Name must not contain a space.)</p>";
 				correct = false;
+		}
+		else {
+				document.getElementById("teamnameLabel").innerHTML = "Team Name";
+				correct = true;
 		}
 
 		emailRegex = /\S+@\S+\.\S+/;
