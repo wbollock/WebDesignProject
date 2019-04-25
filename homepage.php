@@ -12,7 +12,7 @@
 			<h1>Your Team Home Page</h1>
 			<?php
 			$username = $_GET["username"];
-			echo "<p>Welcome $username from process.php</p>";
+			echo "<p>Welcome $username</p>";
 		   
 			// copied from process.php
 			if ( !( $database = mysqli_connect( "dbsrv2.cs.fsu.edu","bollock","1hSObrpVvNhq")))
@@ -35,7 +35,7 @@
 				}
 
 			$team = mysqli_fetch_row($result);
-				echo "<p> Your team is: ".$team[0]."</p>";
+				echo "<p> Team ".$team[0]."</p>";
 			?>
 
 		   <!-- team table --> <!--switch to team name -->
